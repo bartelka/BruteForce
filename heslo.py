@@ -22,6 +22,6 @@ for heslo in hesla:
         break
 
 if najdene_heslo:
-    print('Password found:', najdene_heslo)
+    print('Nájdené heslo:', najdene_heslo)
 else:
-    print('Password not found.')
+    print('Heslo sa nenašlo.')
